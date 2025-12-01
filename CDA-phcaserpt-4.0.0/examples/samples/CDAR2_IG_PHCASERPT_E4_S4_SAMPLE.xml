@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    File:               CDAR2_IG_PHCASERPT_4.0.0_SAMPLE.xml
+    File:               CDAR2_IG_PHCASERPT_E4_S4_SAMPLE.xml
     Specification:      Public Health Case Report, 4.0.0 - US Realm
     
     Created:            Eric M Haas, Health eData Inc, on behalf of HL7 PHER Working Group
@@ -55,9 +55,8 @@
     The examples and sample file included with this IG illustrate the optional use of the C-CDA R1.1 templateId.
 -->
 
-<?xml-stylesheet type="text/xsl" href="../../transform/CDAR2_eCR_eICR.xsl"?>
+<?xml-stylesheet type="text/xsl" href="../../transform/CDAR2_IG_PHCASERPT_E4_S4.xsl"?>
 <ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="urn:hl7-org:v3 ../../../cda-core-2.0/schema/extensions/SDTC/infrastructure/cda/CDA_SDTC.xsd"
   xmlns="urn:hl7-org:v3" xmlns:cda="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc"
   xmlns:voc="http://www.lantanagroup.com/voc">
   <!-- **** CDA Header
@@ -70,6 +69,8 @@
   <templateId root="2.16.840.1.113883.10.20.22.1.1" />
   <!-- [C-CDA R2.1] US Realm Header (V3) -->
   <templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2015-08-01" />
+  <!-- [C-CDA R2.1] US Realm Header (V4) -->
+  <templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2023-05-01" />
   <!-- [eICR R2 STU3] Initial Public Health Case Report Document (eICR) (V6) -->
   <templateId root="2.16.840.1.113883.10.20.15.2" extension="2025-12-01" />
   <!-- Globally unique document ID (extension) is scoped by vendor/software -->
@@ -1015,6 +1016,127 @@
             displayName="Relevant diagnostic tests and/or laboratory data" />
           <title>Results</title>
           <text>
+            <table border="1" width="100%">
+              <thead>
+                <tr>
+                  <th>Susceptibility Battery</th>
+                  <th>Lab Test Name</th>
+                  <th>Lab Test Result Value</th>
+                  <th>Collection Date</th>
+                  <th>Result Date</th>
+                  <th>Lab Result Interpretation</th>
+                  <th>Lab Result Reference Range</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Organism 1 -->
+                <tr>
+                  <td>Organism Detected</td>
+                  <td>
+                    <content ID="labTestName114"
+                      >Bacteria identified:Prid:Pt:Urine:Nom:Culture</content>
+                  </td>
+                  <td>
+                    <content ID="labTestResultValue114">Klebsiella oxytoca</content>
+                  </td>
+                  <td>
+                    <content ID="CollectionDate114">09/29/23 17:54 EDT</content>
+                  </td>
+                  <td>
+                    <content ID="ResultDate114">10/01/23 11:14 EDT</content>
+                  </td>
+                  <td>
+                    <content ID="LabResultInterpretation114">Abnormal</content>
+                  </td>
+                  <td>
+                    <content ID="LabResultReferenceRange114">Unknown</content>
+                  </td>
+                </tr>
+                <!-- Organism 1 Susc -->
+                <tr>
+                  <td>Organism Suscectibility</td>
+                  <td>
+                    <content ID="labTestName124">Meropenem:Susc:Pt:Isolate:OrdQn:</content>
+                  </td>
+                  <td>
+                    <content ID="labTestResultValue124">0.25</content>
+                  </td>
+                  <td>
+                    <content ID="CollectionDate124">09/29/23 17:54 EDT</content>
+                  </td>
+                  <td>
+                    <content ID="ResultDate124">10/01/23 11:14 EDT</content>
+                  </td>
+                  <td>
+                    <content ID="LabResultInterpretation124">Susceptible</content>
+                  </td>
+                  <td>
+                    <content ID="LabResultReferenceRange124">Unknown</content>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table border="1" width="100%">
+              <thead>
+                <tr>
+                  <th>Susceptibility Battery</th>
+                  <th>Lab Test Name</th>
+                  <th>Lab Test Result Value</th>
+                  <th>Collection Date</th>
+                  <th>Result Date</th>
+                  <th>Lab Result Interpretation</th>
+                  <th>Lab Result Reference Range</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Organism 2 Identified -->
+                <tr>
+                  <td>Organism Detected</td>
+                  <td>
+                    <content ID="labTestName237"
+                      >Bacteria identified:Prid:Pt:XXX:Nom:Culture</content>
+                  </td>
+                  <td>
+                    <content ID="labTestResultValue237">Acinetobacter baumannii</content>
+                  </td>
+                  <td>
+                    <content ID="CollectionDate237">10/02/23 17:19 EDT</content>
+                  </td>
+                  <td>
+                    <content ID="ResultDate237">10/04/23 09:01 EDT</content>
+                  </td>
+                  <td>
+                    <content ID="LabResultInterpretation237">Abnormal</content>
+                  </td>
+                  <td>
+                    <content ID="LabResultReferenceRange237">Unknown</content>
+                  </td>
+                </tr>
+                <!-- Organism 2 Susc -->
+                <tr>
+                  <td>Organism Suscectibility</td>
+                  <td>
+                    <content ID="labTestName243">Meropenem:Susc:Pt:Isolate:OrdQn:</content>
+                  </td>
+                  <td>
+                    <content ID="labTestResultValue243">>=16</content>
+                  </td>
+                  <td>
+                    <content ID="CollectionDate243">10/02/23 17:19 EDT</content>
+                  </td>
+                  <td>
+                    <content ID="ResultDate243">10/04/23 09:01 EDT</content>
+                  </td>
+                  <td>
+                    <content ID="LabResultInterpretation243">Resistant</content>
+                  </td>
+                  <td>
+                    <content ID="LabResultReferenceRange243">Unknown</content>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            
             <table>
               <thead>
                 <tr>
@@ -1181,6 +1303,191 @@
               </tbody>
             </table>
           </text>
+          <!-- OPTION ONE: Result Organizer containing both the Result Observation for the organism 
+            identified and any Susceptibility Result Observations -->
+          <!-- Pros: More similar to the current structure
+               Cons: Need to contain multiple Result Observations in one Result Organizer
+                     Maybe a bigger change that adding a small template to point back to the organism? -->
+          <!-- Organism 1 -->
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <!-- [C-CDA R1.1] Result Organizer -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.1" />
+              <!-- [C-CDA R2.1] Result Organizer (V3) -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01" />
+              <!-- [C-CDA CG R4.1] Result Organizer (V4) -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2023-05-01" />
+              <!-- [eICR 4.0.0] Initial Case Report Susceptibility Test Organizer (V4) -->
+              <templateId root="2.16.840.1.113883.10.20.15.2.3.61" extension="2025-12-01" />
+              <id root="7ad9ac8f-66b7-4ac6-a367-797f6458ca3f" />
+              <code code="18725-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                displayName="Microbiology studies (set)" />
+              <statusCode code="completed" />
+              <!-- Organism 1 Identified -->
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <!-- [C-CDA R1.1] Result Observation -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2" />
+                  <!-- [C-CDA R2.1] Result Observation (V3) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01" />
+                  <!-- [C-CDA CG R4.1] Result Observation (V4) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01" />
+                  <!-- [eICR R2 STU2] Initial Case Report Trigger Code Result Observation (V2) -->
+                  <templateId root="2.16.840.1.113883.10.20.15.2.3.2" extension="2019-04-01" />
+                  <!-- [eICR 4.0.0] Initial Case Report Trigger Code Result Observation (V3) -->
+                  <templateId root="2.16.840.1.113883.10.20.15.2.3.2" extension="2025-12-01" />
+                  <id root="344d352e-b418-4440-9ec5-93f37df8caee" />
+                  <code code="630-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                    displayName="Bacteria identified in Urine by Culture">
+                    <originalText>
+                      <reference value="#labTestName114" />
+                    </originalText>
+                  </code>
+                  <statusCode code="completed" />
+                  <effectiveTime>
+                    <low value="20230929165400-0500" />
+                    <high value="20231001101400-0500" />
+                  </effectiveTime>
+                  <!-- Organism 1 -->
+                  <value xsi:type="CD" code="40886007" codeSystem="2.16.840.1.113883.6.96"
+                    codeSystemName="SNOMED-CT" displayName="Klebsiella oxytoca"
+                    sdtc:valueSet="2.16.840.1.114222.4.11.7508"
+                    sdtc:valueSetVersion="2023-02-03" />
+                  <interpretationCode code="A" codeSystem="2.16.840.1.113883.5.83"
+                    codeSystemName="v3-ObservationInterpretation" displayName="Abnormal" />
+                </observation>
+              </component>
+              <!-- Organism 1 Suscetibility Result (could have multiple) -->
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <!-- [C-CDA R1.1] Result Observation -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2" />
+                  <!-- [C-CDA R2.1] Result Observation (V3) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01" />
+                  <!-- [C-CDA CG R4.1] Result Observation (V4) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01" />
+                  <id root="7139fb38-c17c-4be6-959f-d4858a6b91ea" />
+                  <code code="18943-1" codeSystem="2.16.840.1.113883.6.1"
+                    codeSystemName="LOINC" displayName="Meropenem [Susceptibility]">
+                    <originalText>
+                      <reference value="#labTestName124" />
+                    </originalText>
+                  </code>
+                  <statusCode code="completed" />
+                  <effectiveTime>
+                    <low value="20230929165400-0500" />
+                    <high value="20231001101400-0500" />
+                  </effectiveTime>
+                  <!-- Organism 1 Susc -->
+                  <value xsi:type="ST">&lt;0.25</value>
+                  <interpretationCode code="S" codeSystem="2.16.840.1.113883.5.83"
+                    codeSystemName="v3-ObservationInterpretation" displayName="Susceptible" />
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <!-- OPTION TWO - Separate Organizers for each result (organism identified and each susceptibility result), 
+               with a new participant template for use in the susceptibility results pointing back to the organism identified -->
+          <!-- Pros: No change to structure, just add a pointer back to the organism Result Observation
+               Cons: New template needed -->
+          <!-- Organism 2 Identified -->
+          <entry typeCode="DRIV">
+            <organizer classCode="CLUSTER" moodCode="EVN">
+              <!-- [C-CDA R1.1] Result Organizer -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.1" />
+              <!-- [C-CDA R2.1] Result Organizer (V3) -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01" />
+              <!-- [C-CDA CD R4.1] Result Organizer (V4) -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2023-05-01" />
+              <id root="2028d2ad-925a-487d-8dfc-f985a56762f6" />
+              <code code="6463-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                displayName="Bacteria identified in Specimen by Culture" />
+              <statusCode code="completed" />
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <!-- [C-CDA R1.1] Result Observation -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2" />
+                  <!-- [C-CDA R2.1] Result Observation (V3) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01" />
+                  <!-- [C-CDA CG R4.1] Result Observation (V4) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01" />
+                  <!-- [eICR R2 STU2] Initial Case Report Trigger Code Result Observation (V2) -->
+                  <templateId root="2.16.840.1.113883.10.20.15.2.3.2" extension="2019-04-01" />
+                  <!-- [eICR 4.0.0] Initial Case Report Trigger Code Result Observation (V3) -->
+                  <templateId root="2.16.840.1.113883.10.20.15.2.3.2" extension="2025-12-01" />
+                  <!-- Organism 2 Identifier -->
+                  <id root="f8f5bcb6-2a26-492e-9fe1-bfedc1a19d54" />
+                  <code code="6463-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                    displayName="Bacteria identified in Specimen by Culture">
+                    <originalText>
+                      <reference value="#labTestName237" />
+                    </originalText>
+                  </code>
+                  <statusCode code="completed" />
+                  <effectiveTime>
+                    <low value="20231002161900-0500" />
+                    <high value="20231004080100-0500" />
+                  </effectiveTime>
+                  <!-- Organism 2 -->
+                  <value xsi:type="CD" code="91288006" codeSystem="2.16.840.1.113883.6.96"
+                    codeSystemName="SNOMED-CT" displayName="Acinetobacter baumannii"
+                    sdtc:valueSet="2.16.840.1.114222.4.11.7508"
+                    sdtc:valueSetVersion="2023-02-03" />
+                  <interpretationCode code="A" codeSystem="2.16.840.1.113883.5.83"
+                    codeSystemName="v3-ObservationInterpretation" displayName="Abnormal" />
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <!-- Organism 2 Susceptibility -->
+          <entry typeCode="DRIV">
+            <organizer classCode="CLUSTER" moodCode="EVN">
+              <!-- [C-CDA R1.1] Result Organizer -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.1" />
+              <!-- [C-CDA R2.1] Result Organizer (V3) -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01" />
+              <!-- [C-CDA CD R4.1] Result Organizer (V4) -->
+              <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2023-05-01" />
+              <id root="c6b9c6bc-d3d1-4fee-b327-ce7057f118a7" />
+              <code code="18943-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                displayName="Meropenem [Susceptibility]" />
+              <statusCode code="completed" />
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <!-- [C-CDA R1.1] Result Observation -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2" />
+                  <!-- [C-CDA R2.1] Result Observation (V3) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01" />
+                  <!-- [C-CDA CG R4.1] Result Observation (V4) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01" />
+                  <id root="f3f5e01f-da6f-4e28-9b42-83369bb43d0d" />
+                  <code code="18943-1" codeSystem="2.16.840.1.113883.6.1"
+                    codeSystemName="LOINC" displayName="Meropenem [Susceptibility]">
+                    <originalText>
+                      <reference value="#labTestName243" />
+                    </originalText>
+                  </code>
+                  <statusCode code="completed" />
+                  <effectiveTime>
+                    <low value="20231002161900-0500" />
+                    <high value="20231004080100-0500" />
+                  </effectiveTime>
+                  <!-- Organism 2 -->
+                  <value xsi:type="ST">>=16</value>
+                  <interpretationCode code="R" codeSystem="2.16.840.1.113883.5.83"
+                    codeSystemName="v3-ObservationInterpretation" displayName="Resistant" />
+                  <participant typeCode="SBJ">
+                    <!-- [eICR 4.0.0] Initial Case Report Susceptibility Organism Participant -->
+                    <templateId root="2.16.840.1.113883.10.20.15.2.3.60" extension="2025-12-01" />
+                    <participantRole classCode="ISLT">
+                      <!-- Organism identifier - points back to Result Observation identifier -->
+                      <id root="f8f5bcb6-2a26-492e-9fe1-bfedc1a19d54" />
+                    </participantRole>
+                  </participant>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
           <entry typeCode="DRIV">
             <organizer classCode="BATTERY" moodCode="EVN">
               <!-- [C-CDA R1.1] Result Organizer -->

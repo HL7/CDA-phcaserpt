@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-   File:              CDAR2_IG_PHCASERPT_4.0.0_SAMPLE_MANUAL.xml
+   File:               CDAR2_IG_PHCASERPT_E4_S4_SAMPLE_MANUAL.xml
    Specification:      Public Health Case Report, 4.0.0 - US Realm
     
     Created:            Eric M Haas, Health eData Inc, on behalf of HL7 PHER Working Group
@@ -49,9 +49,8 @@
     originating system includes both the versioned and un-versioned templateId, then both these templateIds SHOULD be preserved in the eICR document.
     The examples and sample file included with this IG illustrate the optional use of the C-CDA R1.1 templateId.
 -->
-<?xml-stylesheet type="text/xsl" href="../../transform/CDAR2_eCR_eICR.xsl"?>
+<?xml-stylesheet type="text/xsl" href="../../transform/CDAR2_IG_PHCASERPT_E4_S4.xsl"?>
 <ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="urn:hl7-org:v3 ../../../cda-core-2.0/schema/extensions/SDTC/infrastructure/cda/CDA_SDTC.xsd"
   xmlns="urn:hl7-org:v3" xmlns:cda="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc"
   xmlns:voc="http://www.lantanagroup.com/voc">
   <!-- CDA Header -->
@@ -62,6 +61,8 @@
   <templateId root="2.16.840.1.113883.10.20.22.1.1" />
   <!-- [C-CDA R2.1] US Realm Header (V3) -->
   <templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2015-08-01" />
+  <!-- [C-CDA R2.1] US Realm Header (V4) -->
+  <templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2023-05-01" />
   <!-- [eICR R2 STU3] Initial Public Health Case Report Document (eICR) (V6) -->
   <templateId root="2.16.840.1.113883.10.20.15.2" extension="2025-12-01" />
   <!-- Globally unique document ID (extension) is scoped by vendor/software -->
@@ -286,6 +287,7 @@
             displayName="Outpatient facility" />
           <!-- Facility location within larger healthcare organization e.g Kaiser Vacaville within Kaiser North-->
           <location>
+            <name>HealthCareFacility Name</name>
             <addr>
               <streetAddressLine>1000 Hospital Lane</streetAddressLine>
               <city>Ann Arbor</city>
@@ -766,6 +768,8 @@
                   <templateId root="2.16.840.1.113883.10.20.22.4.2" />
                   <!-- [C-CDA R2.1] Result Observation (V3) -->
                   <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01" />
+                  <!-- [C-CDA CG R4.1] Result Observation (V4) -->
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2023-05-01" />
                   <id root="7c0704bb-9c40-41b5-9c7d-26b2d59e234f" />
                   <code code="20570-8" codeSystem="2.16.840.1.113883.6.1"
                     codeSystemName="LOINC" displayName="Hematocrit" />
