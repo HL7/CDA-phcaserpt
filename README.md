@@ -32,7 +32,6 @@ The purpose of this IG the generation of a Reportability Response from public he
 
 **Ballot Code**: CDAR2_IG_PHCR
 
-
 ## Latest Release: HL7 CDA RR R1.1.1 (Technical Correction/Errata Release)
 
 ## Latest Ballot: HL7 CDA RR R2.0.0 (Ballot)
