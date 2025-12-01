@@ -3,7 +3,7 @@
 
 THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL LANTANA CONSULTING GROUP LLC, OR ANY OF THEIR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-Schematron "fatals" and "severe warnings" updated with eICRExportScript.pl on Mon Dec  1 19:27:02 2025.
+Schematron "fatals" and "severe warnings" updated with eICRExportScript.pl on Mon Dec  1 20:17:42 2025.
 
 Schematron originally generated from Trifolia on 12/1/2025
 
@@ -217,7 +217,6 @@ Schematron originally generated from Trifolia on 12/1/2025
     <sch:active pattern="p-urn-hl7ii-2.16.840.1.113883.10.20.22.4.500.2-2019-07-01-errors" />
     <sch:active pattern="p-urn-hl7ii-2.16.840.1.113883.10.20.22.4.6-2019-06-20-errors" />
     <sch:active pattern="p-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.37-2019-04-01-errors" />
-    <sch:active pattern="p-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.5-2019-04-01-errors" />
     <sch:active pattern="p-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.38-2019-04-01-errors" />
     <sch:active pattern="p-urn-hl7ii-2.16.840.1.113883.10.20.22.4.219-2020-09-01-errors" />
     <sch:active pattern="p-urn-hl7ii-2.16.840.1.113883.10.20.22.4.221-2020-09-01-errors" />
@@ -265,6 +264,7 @@ Schematron originally generated from Trifolia on 12/1/2025
     <sch:active pattern="p-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.3-2025-12-01-errors" />
     <sch:active pattern="p-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.60-2025-12-01-errors" />
     <sch:active pattern="p-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.61-2025-12-01-errors" />
+    <sch:active pattern="p-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.5-2025-12-01-errors" />
   </sch:phase>
   <sch:phase id="warnings">
     <sch:active pattern="p-urn-oid-2.16.840.1.113883.10.20.15.3.1-warnings" />
@@ -416,7 +416,6 @@ Schematron originally generated from Trifolia on 12/1/2025
     <sch:active pattern="p-urn-hl7ii-2.16.840.1.113883.10.20.22.4.500.2-2019-07-01-warnings" />
     <sch:active pattern="p-urn-hl7ii-2.16.840.1.113883.10.20.22.4.6-2019-06-20-warnings" />
     <sch:active pattern="p-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.37-2019-04-01-warnings" />
-    <sch:active pattern="p-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.5-2019-04-01-warnings" />
     <sch:active pattern="p-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.38-2019-04-01-warnings" />
     <sch:active pattern="p-urn-hl7ii-2.16.840.1.113883.10.20.22.4.219-2020-09-01-warnings" />
     <sch:active pattern="p-urn-hl7ii-2.16.840.1.113883.10.20.22.4.221-2020-09-01-warnings" />
@@ -464,6 +463,7 @@ Schematron originally generated from Trifolia on 12/1/2025
     <sch:active pattern="p-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.3-2025-12-01-warnings" />
     <sch:active pattern="p-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.60-2025-12-01-warnings" />
     <sch:active pattern="p-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.61-2025-12-01-warnings" />
+    <sch:active pattern="p-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.5-2025-12-01-warnings" />
   </sch:phase>
   <sch:pattern id="p-validate_document-level-templateId">
     <sch:rule id="r-validate_document-level-templateId-fatal-abstract" abstract="true" role="fatal">
@@ -2929,18 +2929,6 @@ Schematron originally generated from Trifolia on 12/1/2025
       <sch:extends rule="r-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.37-2019-04-01-errors-abstract" />
     </sch:rule>
   </sch:pattern>
-  <sch:pattern id="p-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.5-2019-04-01-errors">
-    <sch:rule role="error" id="r-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.5-2019-04-01-errors-abstract" abstract="true">
-      <sch:assert id="a-4411-340" test="count(cda:templateId[@root='2.16.840.1.113883.10.20.15.2.3.5'][@extension='2019-04-01'])=1">SHALL contain exactly one [1..1] templateId (CONF:4411-340) such that it SHALL contain exactly one [1..1] @root="2.16.840.1.113883.10.20.15.2.3.5" (CONF:4411-352). SHALL contain exactly one [1..1] @extension="2019-04-01" (CONF:4411-353).</sch:assert>
-      <sch:assert id="a-4411-343-c" test="count(cda:value[@xsi:type='CD'])=1">SHALL contain exactly one [1..1] value with @xsi:type="CD" (CONF:4411-343).</sch:assert>
-      <sch:assert id="a-4411-366" test="@classCode='OBS'">SHALL contain exactly one [1..1] @classCode="OBS" Observation (CodeSystem: HL7ActClass urn:oid:2.16.840.1.113883.5.6 STATIC) (CONF:4411-366).</sch:assert>
-      <sch:assert id="a-4411-367" test="@moodCode='EVN'">SHALL contain exactly one [1..1] @moodCode="EVN" Event (CodeSystem: HL7ActMood urn:oid:2.16.840.1.113883.5.1001 STATIC) (CONF:4411-367).</sch:assert>
-      <sch:assert id="a-4411-578-c" test="(cda:value/@nullFlavor and cda:value/cda:originalText) or (cda:value/@code and cda:value/@codeSystem)">Either @nullFlavor and originalText SHALL be present or @code and @codeSystem SHALL be present (CONF:4411-578).</sch:assert>
-    </sch:rule>
-    <sch:rule role="error" id="r-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.5-2019-04-01-errors" context="cda:observation[cda:templateId[@root='2.16.840.1.113883.10.20.15.2.3.5' and @extension='2019-04-01']]">
-      <sch:extends rule="r-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.5-2019-04-01-errors-abstract" />
-    </sch:rule>
-  </sch:pattern>
   <sch:pattern id="p-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.38-2019-04-01-errors">
     <sch:rule role="error" id="r-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.38-2019-04-01-errors-abstract" abstract="true">
       <sch:extends rule="r-urn-hl7ii-2.16.840.1.113883.10.20.22.4.54-2014-06-09-errors-abstract" />
@@ -3935,6 +3923,19 @@ If value data type is CD (xsi:type="CD") and the contained value/translation/@co
     </sch:rule>
     <sch:rule role="error" id="r-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.61-2025-12-01-errors" context="cda:organizer[cda:templateId[@root='2.16.840.1.113883.10.20.15.2.3.61' and @extension='2025-12-01']]">
       <sch:extends rule="r-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.61-2025-12-01-errors-abstract" />
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern id="p-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.5-2025-12-01-errors">
+    <sch:rule role="error" id="r-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.5-2025-12-01-errors-abstract" abstract="true">
+      <sch:extends rule="r-urn-hl7ii-2.16.840.1.113883.10.20.22.4.4-2022-06-01-errors-abstract" />
+      <sch:assert id="a-5572-340" test="count(cda:templateId[@root='2.16.840.1.113883.10.20.15.2.3.5'][@extension='2025-12-01'])=1">SHALL contain exactly one [1..1] templateId (CONF:5572-340) such that it SHALL contain exactly one [1..1] @root="2.16.840.1.113883.10.20.15.2.3.5" (CONF:5572-352). SHALL contain exactly one [1..1] @extension="2025-12-01" (CONF:5572-353).</sch:assert>
+      <sch:assert id="a-5572-343-c" test="count(cda:value[@xsi:type='CD'])=1">SHALL contain exactly one [1..1] value with @xsi:type="CD" (CONF:5572-343).</sch:assert>
+      <sch:assert id="a-5572-578-c" test="(cda:value/@nullFlavor and cda:value/cda:originalText) or (cda:value/@code and cda:value/@codeSystem)">Either @nullFlavor and originalText SHALL be present or @code and @codeSystem SHALL be present (CONF:5572-578).</sch:assert>
+      <sch:assert id="a-5572-366" test="@classCode='OBS'">SHALL contain exactly one [1..1] @classCode="OBS" Observation (CodeSystem: HL7ActClass urn:oid:2.16.840.1.113883.5.6 STATIC) (CONF:5572-366).</sch:assert>
+      <sch:assert id="a-5572-367" test="@moodCode='EVN'">SHALL contain exactly one [1..1] @moodCode="EVN" Event (CodeSystem: HL7ActMood urn:oid:2.16.840.1.113883.5.1001 STATIC) (CONF:5572-367).</sch:assert>
+    </sch:rule>
+    <sch:rule role="error" id="r-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.5-2025-12-01-errors" context="cda:observation[cda:templateId[@root='2.16.840.1.113883.10.20.15.2.3.5' and @extension='2025-12-01']]">
+      <sch:extends rule="r-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.5-2025-12-01-errors-abstract" />
     </sch:rule>
   </sch:pattern>
   <sch:pattern id="p-urn-oid-2.16.840.1.113883.10.20.15.3.1-warnings">
@@ -5291,14 +5292,6 @@ If value data type is CD (xsi:type="CD") and the contained value/translation/@co
       <sch:extends rule="r-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.37-2019-04-01-warnings-abstract" />
     </sch:rule>
   </sch:pattern>
-  <sch:pattern id="p-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.5-2019-04-01-warnings">
-    <sch:rule role="warning" id="r-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.5-2019-04-01-warnings-abstract" abstract="true">
-      <sch:assert test="."></sch:assert>
-    </sch:rule>
-    <sch:rule role="warning" id="r-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.5-2019-04-01-warnings" context="cda:observation[cda:templateId[@root='2.16.840.1.113883.10.20.15.2.3.5' and @extension='2019-04-01']]">
-      <sch:extends rule="r-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.5-2019-04-01-warnings-abstract" />
-    </sch:rule>
-  </sch:pattern>
   <sch:pattern id="p-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.38-2019-04-01-warnings">
     <sch:rule role="warning" id="r-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.38-2019-04-01-warnings-abstract" abstract="true">
       <sch:extends rule="r-urn-hl7ii-2.16.840.1.113883.10.20.22.4.54-2014-06-09-warnings-abstract" />
@@ -5841,9 +5834,9 @@ If value data type is CD (xsi:type="CD") and the contained value/translation/@co
     <sch:rule role="warning" id="r-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.3-2025-12-01-warnings-abstract" abstract="true">
       <sch:extends rule="r-urn-hl7ii-2.16.840.1.113883.10.20.22.4.4-2022-06-01-warnings-abstract" />
       <sch:assert id="a-5572-176" test="cda:value[@xsi:type='CD'][@code]">This value SHOULD contain zero or one [0..1] @code (CONF:5572-176).</sch:assert>
-      <sch:assert id="a-5572-1157-c" test="not(.)">Or **SHOULD** be selected from ValueSet:Suspected_Disorder Triggers for Public Health Reporting (RCTC Subset) (urn:oid:2.16.840.1.113762.1.4.1146.1479) **DYNAMIC** (CONF:5572-1157).</sch:assert>
-      <sch:assert id="a-5572-1158-c" test="not(.)">Which **SHOULD** be selected from ValueSet: Diagnosis_Problem Triggers for Public Health Reporting (RCTC Subset) (urn:oid:2.16.840.1.113762.1.4.1146.627) **DYNAMIC** (CONF:5572-1158).</sch:assert>
-      <sch:assert id="a-5572-1159-c" test="not(.)">Or **SHOULD** be selected from ValueSet:Suspected_Disorder Triggers for Public Health Reporting (RCTC Subset) (urn:oid:2.16.840.1.113762.1.4.1146.1479) **DYNAMIC** (CONF:5572-1159).</sch:assert>
+      <sch:assert id="a-5572-1157-c" test="not(tested_yet)">Or **SHOULD** be selected from ValueSet:Suspected_Disorder Triggers for Public Health Reporting (RCTC Subset) (urn:oid:2.16.840.1.113762.1.4.1146.1479) **DYNAMIC** (CONF:5572-1157).</sch:assert>
+      <sch:assert id="a-5572-1158-c" test="not(tested_yet)">Which **SHOULD** be selected from ValueSet: Diagnosis_Problem Triggers for Public Health Reporting (RCTC Subset) (urn:oid:2.16.840.1.113762.1.4.1146.627) **DYNAMIC** (CONF:5572-1158).</sch:assert>
+      <sch:assert id="a-5572-1159-c" test="not(tested_yet)">Or **SHOULD** be selected from ValueSet:Suspected_Disorder Triggers for Public Health Reporting (RCTC Subset) (urn:oid:2.16.840.1.113762.1.4.1146.1479) **DYNAMIC** (CONF:5572-1159).</sch:assert>
       <sch:assert id="a-5572-187" test="cda:value[@xsi:type='CD'][@sdtc:valueSet='2.16.840.1.114222.4.11.7508']">This value SHOULD contain zero or one [0..1] @sdtc:valueSet="2.16.840.1.114222.4.11.7508" (CONF:5572-187).</sch:assert>
       <sch:assert id="a-5572-188" test="cda:value[@xsi:type='CD'][@sdtc:valueSetVersion]">This value SHOULD contain zero or one [0..1] @sdtc:valueSetVersion (CONF:5572-188).</sch:assert>
     </sch:rule>
@@ -5866,6 +5859,15 @@ If value data type is CD (xsi:type="CD") and the contained value/translation/@co
     </sch:rule>
     <sch:rule role="warning" id="r-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.61-2025-12-01-warnings" context="cda:organizer[cda:templateId[@root='2.16.840.1.113883.10.20.15.2.3.61' and @extension='2025-12-01']]">
       <sch:extends rule="r-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.61-2025-12-01-warnings-abstract" />
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern id="p-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.5-2025-12-01-warnings">
+    <sch:rule role="warning" id="r-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.5-2025-12-01-warnings-abstract" abstract="true">
+      <sch:extends rule="r-urn-hl7ii-2.16.840.1.113883.10.20.22.4.4-2022-06-01-warnings-abstract" />
+      <sch:assert test="."></sch:assert>
+    </sch:rule>
+    <sch:rule role="warning" id="r-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.5-2025-12-01-warnings" context="cda:observation[cda:templateId[@root='2.16.840.1.113883.10.20.15.2.3.5' and @extension='2025-12-01']]">
+      <sch:extends rule="r-urn-hl7ii-2.16.840.1.113883.10.20.15.2.3.5-2025-12-01-warnings-abstract" />
     </sch:rule>
   </sch:pattern>
 </sch:schema>
