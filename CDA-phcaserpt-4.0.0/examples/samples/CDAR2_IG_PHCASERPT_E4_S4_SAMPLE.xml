@@ -360,9 +360,9 @@
       <component>
         <section>
           <!-- [C-CDA R1.1] Plan of Care Section -->
-          <templateId root="2.16.840.1.113883.10.20.22.2.22.10" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.10" />
           <!-- [C-CDA R2.0] Plan of Treatment Section (V2) -->
-          <templateId root="2.16.840.1.113883.10.20.22.2.22.10" extension="2014-06-09" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.10" extension="2014-06-09" />
           <code code="18776-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
             displayName="Plan of Treatment" />
           <title>Plan of Treatment</title>
@@ -2745,7 +2745,7 @@
       <component>
         <section>
           <!--  [C-CDA PREG] Pregnancy Section -->
-          <templateId root="2.16.840.1.113883.10.20.22.2.80" extension="2020-04-01" />
+          <templateId root="2.16.840.1.113883.10.20.22.2.80" extension="2018-04-01" />
           <code code="90767-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
             displayName="Pregnancy summary Document" />
           <title>Pregnancy Section</title>
@@ -2899,7 +2899,7 @@
               <!-- [C-CDA R1] Pregnancy Observation -->
               <templateId root="2.16.840.1.113883.10.20.15.3.8" />
               <!-- [C-CDA PREG] Pregnancy Observation (SUPPLEMENTAL PREGNANCY)-->
-              <templateId root="2.16.840.1.113883.10.20.22.4.293" extension="2020-04-01" />
+              <templateId root="2.16.840.1.113883.10.20.22.4.293" extension="2018-04-01" />
               <id root="bab77407-f76d-4a51-a2ed-980c8a59fe28" />
               <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" />
               <statusCode code="completed" />
